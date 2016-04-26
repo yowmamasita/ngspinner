@@ -1,9 +1,8 @@
 var angular = require('angular');
 
-angular
-  .module('spinner', [])
-  .directive('spinner', SpinnerDirective)
-  .factory('Spinner', SpinnerFactory);
+var ngModule = angular.module('spinner', []);
+ngModule.directive('spinner', SpinnerDirective);
+ngModule.factory('Spinner', SpinnerFactory);
 
 function SpinnerDirective() {
 
@@ -50,3 +49,5 @@ function SpinnerFactory() {
 
   return Spinner;
 }
+
+module.exports = ngModule;
